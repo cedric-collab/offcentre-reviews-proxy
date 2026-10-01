@@ -1,8 +1,8 @@
 # Upsell du Pass après Reboost · montage dans Scalz
 
 Deux pages identiques, seuls changent le nom du Pass, la description et le témoignage :
-- tunnel **Reboost Hormonal** → page `Upsell Hormonal/` (témoignage de Julie)
-- tunnel **Reboost Ménopause** → page `Upsell Ménopause/` (témoignage de Mélodie)
+- tunnel **Reboost Hormonal** → page `Upsell Hormonal/` (avant/après et témoignage de Julie)
+- tunnel **Reboost Ménopause** → page `Upsell Ménopause/` (témoignages de Mélodie et Rosie)
 
 ## 1. L'étape dans le tunnel Reboost
 
@@ -17,9 +17,9 @@ Deux pages identiques, seuls changent le nom du Pass, la description et le témo
 |---|---|---|
 | 1 | Code personnalisé | `1 haut et vidéo.html` |
 | 2 | **BOUTON 1** | (natif Scalz, voir plus bas) |
-| 3 | Code personnalisé | `2 offre.html` |
+| 3 | Code personnalisé | `2 offre.html` (pourquoi maintenant, un mois dans le Pass, le prix) |
 | 4 | **BOUTON 2** | identique au bouton 1 |
-| 5 | Code personnalisé | `3 questions.html` |
+| 5 | Code personnalisé | `3 témoignages et questions.html` (témoignages, Laurette, et après, questions) |
 | 6 | **BOUTON 3** | identique au bouton 1 |
 | 7 | Lien texte ou petit bouton | « Non merci, je continue sans le Pass » → action **Aller à l'étape suivante** |
 | 8 | Code personnalisé | `4 pied de page.html` |

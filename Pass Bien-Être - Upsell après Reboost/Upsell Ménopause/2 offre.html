@@ -1,13 +1,18 @@
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&display=swap");
-.pbc{--ink:#2F4A3C;--ink2:#3D5C4B;--acc:#C9785B;--acc-soft:#F7E6DC;--sage:#B7C9B5;--off:#FAF7F1;--stone:#EFEBE3;--text:#1F2420;--muted:#5E655F;--line:rgba(31,36,32,.12);font-family:Outfit,system-ui,sans-serif;color:var(--text);line-height:1.5;-webkit-font-smoothing:antialiased}
+.pbc{--ink:#2F4A3C;--ink2:#3D5C4B;--acc:#C9785B;--acc-soft:#F7E6DC;--sage:#B7C9B5;--off:#FAF7F1;--stone:#EFEBE3;--text:#1F2420;--muted:#5E655F;--line:rgba(31,36,32,.12);--card-line:#DCD3C4;font-family:Outfit,system-ui,sans-serif;color:var(--text);line-height:1.5;-webkit-font-smoothing:antialiased}
 :where(.pbc) *{box-sizing:border-box;margin:0;padding:0}
 :where(.pbc) .ic{width:1em;height:1em;display:inline-block;vertical-align:-.14em;flex:0 0 auto}
 :where(.pbc) .mono{font-size:12px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
 .pbc-full{width:100vw;position:relative;left:50%;margin-left:-50vw}
-.pbu-in{max-width:1080px;margin:0 auto;padding:0 24px}
-@media (max-width:760px){.pbu-in{padding:0 18px}}
+.pbu-in{max-width:1180px;margin:0 auto;padding:0 24px}
+.pbu-h2{font-size:clamp(32px,4.2vw,54px);font-weight:500;letter-spacing:-.035em;line-height:1.04;margin-top:14px}
+.pbu-h2 .br,.pbu-h1 .br{color:var(--acc);font-weight:300}
+.pbu-lead{font-size:20px;color:var(--muted);margin-top:16px;max-width:680px;line-height:1.5}
+.pbu-sec{padding:88px 0}
+.pbu-reassure{display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:wrap;margin-top:16px;color:var(--muted);font-size:15px}
+@media (max-width:760px){.pbu-in{padding:0 20px}.pbu-sec{padding:56px 0}.pbu-lead{font-size:18px}}
 </style>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
 <symbol id="c-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></symbol>
@@ -16,63 +21,105 @@
 <symbol id="c-play" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M7 4.5v15l12-7.5z"/></symbol>
 </defs></svg>
 <style>
-.pbu-off{padding:56px 0 30px}
-.pbu-off h2{font-size:clamp(28px,3.4vw,42px);font-weight:500;letter-spacing:-.03em;line-height:1.1;margin-top:12px;max-width:720px}
-.pbu-off .pbu-lead{margin-top:12px;font-size:18px;color:var(--muted);max-width:680px}
-.pbu-cmp{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:16px;margin-top:30px;align-items:start}
-.pbu-col{border-radius:26px;padding:28px}
-.pbu-col.solo{background:var(--off)}
-.pbu-col.pass{background:var(--ink);color:#fff}
-.pbu-col.pass .mono{color:rgba(255,255,255,.75)}
-.pbu-col h3{font-size:24px;font-weight:500;letter-spacing:-.02em;line-height:1.15;margin-top:8px}
-.pbu-col .pbu-d{margin-top:8px;font-size:16px;opacity:.85}
-.pbu-col ul{list-style:none;margin-top:16px}
-.pbu-col li{display:flex;gap:10px;padding:9px 0;border-top:1px solid var(--line);font-size:16px;line-height:1.4}
-.pbu-col.pass li{border-top-color:rgba(255,255,255,.14)}
-.pbu-col li:first-child{border-top:0}
-.pbu-col li .ic{color:var(--acc);margin-top:3px}
-.pbu-col.pass li .ic{color:var(--acc-soft)}
-.pbu-col.solo li .ic{color:var(--ink2)}
-.pbu-price{margin-top:22px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);border-radius:18px;padding:18px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
-.pbu-price b{font-size:44px;font-weight:500;letter-spacing:-.04em;line-height:1;white-space:nowrap}
-.pbu-price b s{font-size:.42em;opacity:.6;margin-right:8px;font-weight:400}
-.pbu-price b small{font-size:17px;font-weight:400}
-.pbu-price p{font-size:14px;line-height:1.4;opacity:.9;max-width:300px}
-.pbu-proof{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:16px;margin-top:16px;align-items:center}
-.pbu-tq{background:#fff;border-radius:24px;padding:18px;border:1px solid var(--line);box-shadow:0 18px 40px -28px rgba(47,74,60,.45)}
-.pbu-tq .pbu-pull{font-size:21px;font-weight:500;line-height:1.25;letter-spacing:-.01em;margin-bottom:12px}
-.pbu-tq img{display:block;width:100%;border-radius:12px;border:1px solid var(--line)}
-.pbu-who{margin-top:12px;font-size:14px;color:var(--muted)}
-.pbu-who b{color:var(--text);font-weight:600;margin-right:6px}
-.pbu-lau{display:flex;gap:16px;align-items:center;background:var(--off);border-radius:24px;padding:22px}
-.pbu-lau img{width:72px;height:72px;border-radius:50%;object-fit:cover;object-position:center 20%;flex:0 0 72px}
-.pbu-lau b{display:block;font-weight:600;font-size:17px}
-.pbu-lau span{display:block;font-size:15px;color:var(--muted);margin-top:2px}
-@media (max-width:760px){.pbu-off{padding:40px 0 22px}.pbu-cmp,.pbu-proof{grid-template-columns:1fr}.pbu-col{padding:22px}.pbu-price b{font-size:38px}}
+.pbu-why .pbu-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:48px}
+.pbu-card{background:#fff;border:1.5px solid var(--card-line);border-radius:26px;padding:30px;box-shadow:0 22px 44px -26px rgba(40,35,25,.35)}
+.pbu-card .n{font-size:15px;font-weight:600;color:var(--acc)}
+.pbu-card h3{font-size:30px;font-weight:500;letter-spacing:-.025em;line-height:1.05;margin:12px 0 12px}
+.pbu-card p{font-size:18px;line-height:1.5;opacity:.85}
+.pbu-card.dark{background:var(--ink);color:#fff;border-color:var(--ink)}
+.pbu-card.dark .n{color:var(--acc-soft)}
+.pbu-month{background:var(--off)}
+.pbu-mgrid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px;align-items:center;margin-top:48px}
+.pbu-slides{position:relative;aspect-ratio:4/3;border-radius:32px;overflow:hidden;background:#DADAD4}
+.pbu-slide{position:absolute;inset:0;opacity:0;transition:opacity .35s;display:flex;align-items:center;justify-content:center}
+.pbu-slide.on{opacity:1}
+.pbu-slide.acad{background:linear-gradient(160deg,#E7EDE4,#D5E0D2)}
+.pbu-slide.acad .screen{width:86%;background:#1F2A24;border-radius:14px;padding:10px;box-shadow:0 20px 50px rgba(0,0,0,.18)}
+.pbu-slide.acad img{display:block;width:100%;border-radius:6px}
+.pbu-slide.chal{background:var(--acc-soft)}
+.pbu-planner{width:84%;max-width:420px;background:#fff;border-radius:20px;padding:26px;box-shadow:0 20px 50px rgba(0,0,0,.10)}
+.pbu-planner b{display:block;font-size:22px;font-weight:500;line-height:1.15;margin:8px 0 18px;letter-spacing:-.02em}
+.pbu-planner .days{display:grid;grid-template-columns:repeat(7,1fr);gap:7px}
+.pbu-planner .days i{font-style:normal;aspect-ratio:1;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:600;background:#F3EEE6;color:#8A8378}
+.pbu-planner .days i.ok{background:var(--acc);color:#fff}
+.pbu-planner .days i.now{background:#fff;color:var(--text);box-shadow:inset 0 0 0 2px var(--acc)}
+.pbu-slide.menu{background:#FAF6F0}
+.pbu-slide.menu img,.pbu-slide.live img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}
+.pbu-slide.live{background:#202124}
+.pbu-chip{position:absolute;left:18px;bottom:18px;background:#fff;border-radius:999px;padding:9px 16px;font-size:14px;font-weight:600;color:var(--text)}
+.pbu-tabs{display:flex;gap:8px;flex-wrap:wrap}
+.pbu-tabs button{border:1.5px solid var(--card-line);background:#fff;color:var(--text);border-radius:999px;padding:10px 16px;font:500 15px Outfit,sans-serif;cursor:pointer}
+.pbu-tabs button.on{background:var(--ink);border-color:var(--ink);color:#fff}
+.pbu-panel{display:none;margin-top:26px}
+.pbu-panel.on{display:block}
+.pbu-panel h3{font-size:clamp(30px,3.2vw,42px);font-weight:500;letter-spacing:-.03em;line-height:1.05;margin-top:10px}
+.pbu-panel p{font-size:19px;color:var(--muted);margin-top:12px;max-width:460px}
+.pbu-plus{margin-top:28px;padding-top:20px;border-top:1px solid var(--line);font-size:16px;color:var(--muted)}
+.pbu-plus b{color:var(--text);font-weight:500}
+.pbu-offer .box{background:var(--ink);color:#fff;border-radius:32px;padding:48px;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:48px;align-items:center}
+.pbu-offer .box .mono{color:var(--acc-soft)}
+.pbu-offer h3{font-size:clamp(28px,3vw,38px);font-weight:500;letter-spacing:-.03em;line-height:1.05;margin-top:10px}
+.pbu-offer .d{margin-top:10px;font-size:17px;opacity:.85}
+.pbu-offer ul{list-style:none;margin-top:18px}
+.pbu-offer li{display:flex;gap:10px;padding:9px 0;border-top:1px solid rgba(255,255,255,.14);font-size:16px;line-height:1.4}
+.pbu-offer li:first-child{border-top:0}
+.pbu-offer li .ic{color:var(--acc-soft);margin-top:3px}
+.pbu-price{background:#fff;color:var(--text);border-radius:26px;padding:32px 28px;text-align:center}
+.pbu-price .old{font-size:22px;color:var(--muted);text-decoration:line-through}
+.pbu-amount{font-size:clamp(72px,8vw,112px);font-weight:500;letter-spacing:-.05em;line-height:.95;white-space:nowrap;margin-top:4px}
+.pbu-amount small{font-size:.3em;letter-spacing:-.01em;font-weight:400}
+.pbu-price .tag{display:inline-block;margin-top:14px;background:var(--acc-soft);color:var(--acc);border-radius:999px;padding:6px 14px;font-size:14px;font-weight:600}
+.pbu-price p{margin-top:14px;font-size:15px;color:var(--muted);line-height:1.45}
+@media (max-width:900px){.pbu-why .pbu-cards,.pbu-mgrid,.pbu-offer .box{grid-template-columns:1fr}.pbu-mgrid{gap:28px;margin-top:32px}.pbu-why .pbu-cards{margin-top:30px;gap:14px}}
+@media (max-width:760px){.pbu-card{padding:24px}.pbu-card h3{font-size:27px}.pbu-card p{font-size:17px}.pbu-slides{border-radius:24px}.pbu-planner{width:90%;padding:16px 18px}.pbu-planner b{font-size:18px;margin:4px 0 12px}.pbu-planner .days{gap:5px}.pbu-planner .days i{font-size:11px}.pbu-tabs{flex-wrap:nowrap;overflow-x:auto;margin:0 -20px;padding:0 20px 4px;scrollbar-width:none}.pbu-tabs::-webkit-scrollbar{display:none}.pbu-tabs button{flex:0 0 auto;font-size:14px;padding:9px 14px}.pbu-panel p{font-size:17px}.pbu-offer .box{padding:26px 20px;border-radius:26px;gap:24px}.pbu-price{padding:26px 18px}}
 </style>
-<div class="pbc">
-  <section class="pbu-off"><div class="pbu-in">
-    <span class="mono">Reboost + le Pass</span>
-    <h2>Le programme te donne le plan. Le Pass t'aide à le tenir.</h2>
-    <p class="pbu-lead">Les premières semaines, tout va bien. Puis viennent un écart, un plateau, une semaine chargée. C'est là que la plupart abandonnent, et c'est là que je veux être avec toi.</p>
-    <div class="pbu-cmp">
-      <div class="pbu-col solo">
-        <span class="mono">Ce que tu as déjà</span>
-        <h3>Reboost</h3>
-        <p class="pbu-d">Ton programme alimentaire, à suivre en autonomie.</p>
-        <ul><li><svg class="ic"><use href="#c-check"/></svg>Quoi manger, et comment</li><li><svg class="ic"><use href="#c-check"/></svg>À ton rythme, seule</li></ul>
+<div class="pbc pbc-full">
+  <section class="pbu-sec pbu-why"><div class="pbu-in">
+    <span class="mono">Pourquoi maintenant</span>
+    <h2 class="pbu-h2">Le plan, tu l'as.<br><span class="br">[</span>Le suivi<span class="br">]</span>, c'est le Pass.</h2>
+    <div class="pbu-cards">
+      <div class="pbu-card"><span class="n">01</span><h3>Tu as le plan</h3><p>Reboost te dit quoi manger. Les premières semaines, tout va bien.</p></div>
+      <div class="pbu-card"><span class="n">02</span><h3>Puis les questions arrivent</h3><p>Un écart, un plateau, une semaine chargée. Seule, c'est là qu'on lâche.</p></div>
+      <div class="pbu-card dark"><span class="n">03</span><h3>Le Pass t'accompagne</h3><p>Chaque mois, un thème, un live et un groupe. Tu ajustes au lieu de recommencer.</p></div>
+    </div>
+  </div></section>
+
+  <section class="pbu-sec pbu-month"><div class="pbu-in">
+    <span class="mono">Un mois dans le Pass</span>
+    <h2 class="pbu-h2">Chaque mois, <span class="br">[</span>on avance<span class="br">]</span> ensemble.</h2>
+    <div class="pbu-mgrid">
+      <div class="pbu-slides">
+        <div class="pbu-slide acad on"><div class="screen"><img src="https://assets.cdn.filesafe.space/tgitGh89CSLodbRDn3fT/media/6abbf18c12c0bdec2cb54937.png" alt="L'espace membre du Pass : le thème du mois" loading="lazy"></div></div>
+        <div class="pbu-slide chal"><div class="pbu-planner"><span class="mono">Mon challenge</span><b>21 jours pour passer à l'action</b><div class="days"><i class="ok">1</i><i class="ok">2</i><i class="ok">3</i><i class="ok">4</i><i class="ok">5</i><i class="ok">6</i><i class="ok">7</i><i class="ok">8</i><i class="now">9</i><i class="">10</i><i class="">11</i><i class="">12</i><i class="">13</i><i class="">14</i><i class="">15</i><i class="">16</i><i class="">17</i><i class="">18</i><i class="">19</i><i class="">20</i><i class="">21</i></div></div></div>
+        <div class="pbu-slide menu"><img src="https://assets.cdn.filesafe.space/tgitGh89CSLodbRDn3fT/media/6abbf125001f4ad24e638512.jpg" alt="Des repas des menus de la semaine" loading="lazy"><span class="pbu-chip">Une semaine de menus</span></div>
+        <div class="pbu-slide live"><img src="https://assets.cdn.filesafe.space/tgitGh89CSLodbRDn3fT/media/6abbe6677f8e19690f50b344.jpg" alt="Le live avec Laurette et les membres du Pass" loading="lazy"><span class="pbu-chip">En direct avec Laurette</span></div>
       </div>
-      <div class="pbu-col pass">
-        <span class="mono">Ce que le Pass ajoute, chaque mois</span>
-        <h3>Pass Bien-Être Ménopause</h3>
-        <p class="pbu-d">Pour comprendre les changements de ton corps à la ménopause et retrouver des repères adaptés.</p>
-        <ul><li><svg class="ic"><use href="#c-check"/></svg>Un thème chaque mois, avec une masterclass et 2 mini-cours</li><li><svg class="ic"><use href="#c-check"/></svg>Un challenge de 21 jours, avec tes outils et ton planner</li><li><svg class="ic"><use href="#c-check"/></svg>Une semaine de menus, liée au thème du mois</li><li><svg class="ic"><use href="#c-check"/></svg>Un live avec moi chaque mois, pour poser tes questions</li><li><svg class="ic"><use href="#c-check"/></svg>Le groupe privé, où je suis présente du lundi au vendredi</li><li><svg class="ic"><use href="#c-check"/></svg>L'Académie LE Bien-Être</li><li><svg class="ic"><use href="#c-check"/></svg>-20 % sur toute ma boutique</li></ul>
-        <div class="pbu-price"><b><s>69 €</s>49 €<small>/mois</small></b><p>Prix réservé aux clientes Reboost. Il reste le tien tant que tu restes abonnée. Sans engagement.</p></div>
+      <div>
+        <div class="pbu-tabs"><button type="button" class="on" data-i="0">Début du mois</button><button type="button" class="" data-i="1">Du 1er au 21</button><button type="button" class="" data-i="2">Pour démarrer</button><button type="button" class="" data-i="3">Mi-mois</button></div>
+        <div class="pbu-panel on"><span class="mono">Début du mois</span><h3>Le thème du mois</h3><p>Une vidéo de bienvenue, une masterclass et deux mini-cours pour comprendre ce qui se passe dans ton corps.</p></div><div class="pbu-panel"><span class="mono">Du 1er au 21</span><h3>Le challenge</h3><p>21 jours pour passer à l'action, avec tes fiches outils et ton planner.</p></div><div class="pbu-panel"><span class="mono">Pour démarrer</span><h3>Une semaine de menus</h3><p>7 jours de menus, liés au thème du mois, pour démarrer sans te poser de questions.</p></div><div class="pbu-panel"><span class="mono">Mi-mois</span><h3>Le live avec moi</h3><p>En direct avec moi. Tu poses tes questions, je réponds à chacune.</p></div>
+        <p class="pbu-plus"><b>Et tout le mois :</b> le groupe privé, où je suis là du lundi au vendredi, l'Académie LE Bien-Être et -20 % sur toute ma boutique.</p>
       </div>
     </div>
-    <div class="pbu-proof">
-      <div class="pbu-tq"><p class="pbu-pull">« -4,3 kg alors que je n'y croyais plus. »</p><img src="https://assets.cdn.filesafe.space/tgitGh89CSLodbRDn3fT/media/6abbf08e001f4ad24e6373c2.png" alt="Message d'une cliente à Laurette" loading="lazy"><div class="pbu-who"><b>Mélodie</b>Approchant la cinquantaine</div></div>
-      <div class="pbu-lau"><img src="https://assets.cdn.filesafe.space/tgitGh89CSLodbRDn3fT/media/6ab932c87ef452865a0240eb.webp" alt="Laurette Eustache"><div><b>Avec Laurette Eustache</b><span>Diététicienne depuis 17 ans · +1 560 femmes accompagnées</span></div></div>
+  </div></section>
+
+  <section class="pbu-sec pbu-offer"><div class="pbu-in">
+    <div class="box">
+      <div>
+        <span class="mono">Ce que le Pass ajoute à Reboost</span>
+        <h3>Pass Bien-Être Ménopause</h3>
+        <p class="d">Pour comprendre les changements de ton corps à la ménopause et retrouver des repères adaptés.</p>
+        <ul><li><svg class="ic"><use href="#c-check"/></svg>Un thème chaque mois, avec une masterclass et 2 mini-cours</li><li><svg class="ic"><use href="#c-check"/></svg>Un challenge de 21 jours, avec tes outils et ton planner</li><li><svg class="ic"><use href="#c-check"/></svg>Une semaine de menus, liée au thème du mois</li><li><svg class="ic"><use href="#c-check"/></svg>Un live avec moi chaque mois</li><li><svg class="ic"><use href="#c-check"/></svg>Le groupe privé, où je suis là du lundi au vendredi</li><li><svg class="ic"><use href="#c-check"/></svg>L'Académie LE Bien-Être</li><li><svg class="ic"><use href="#c-check"/></svg>-20 % sur toute ma boutique</li></ul>
+      </div>
+      <div class="pbu-price">
+        <span class="mono">Prix réservé aux clientes Reboost</span>
+        <div class="old" style="margin-top:12px">69 €/mois</div>
+        <div class="pbu-amount">49 €<small>/mois</small></div>
+        <span class="tag">Tu économises 20 € chaque mois</span>
+        <p>Ce prix reste le tien tant que tu restes abonnée. Sans engagement, résiliable depuis ton espace membre.</p>
+      </div>
     </div>
   </div></section>
 </div>
+<script>
+(function(){document.querySelectorAll('.pbu-month').forEach(function(m){var b=m.querySelectorAll('.pbu-tabs button'),p=m.querySelectorAll('.pbu-panel'),s=m.querySelectorAll('.pbu-slide');b.forEach(function(x){x.addEventListener('click',function(){var i=+x.getAttribute('data-i');[b,p,s].forEach(function(l){l.forEach(function(e,j){e.classList.toggle('on',j===i)})})})})})})();
+</script>

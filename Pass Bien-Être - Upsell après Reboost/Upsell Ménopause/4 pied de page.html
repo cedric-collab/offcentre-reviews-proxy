@@ -1,13 +1,18 @@
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&display=swap");
-.pbc{--ink:#2F4A3C;--ink2:#3D5C4B;--acc:#C9785B;--acc-soft:#F7E6DC;--sage:#B7C9B5;--off:#FAF7F1;--stone:#EFEBE3;--text:#1F2420;--muted:#5E655F;--line:rgba(31,36,32,.12);font-family:Outfit,system-ui,sans-serif;color:var(--text);line-height:1.5;-webkit-font-smoothing:antialiased}
+.pbc{--ink:#2F4A3C;--ink2:#3D5C4B;--acc:#C9785B;--acc-soft:#F7E6DC;--sage:#B7C9B5;--off:#FAF7F1;--stone:#EFEBE3;--text:#1F2420;--muted:#5E655F;--line:rgba(31,36,32,.12);--card-line:#DCD3C4;font-family:Outfit,system-ui,sans-serif;color:var(--text);line-height:1.5;-webkit-font-smoothing:antialiased}
 :where(.pbc) *{box-sizing:border-box;margin:0;padding:0}
 :where(.pbc) .ic{width:1em;height:1em;display:inline-block;vertical-align:-.14em;flex:0 0 auto}
 :where(.pbc) .mono{font-size:12px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
 .pbc-full{width:100vw;position:relative;left:50%;margin-left:-50vw}
-.pbu-in{max-width:1080px;margin:0 auto;padding:0 24px}
-@media (max-width:760px){.pbu-in{padding:0 18px}}
+.pbu-in{max-width:1180px;margin:0 auto;padding:0 24px}
+.pbu-h2{font-size:clamp(32px,4.2vw,54px);font-weight:500;letter-spacing:-.035em;line-height:1.04;margin-top:14px}
+.pbu-h2 .br,.pbu-h1 .br{color:var(--acc);font-weight:300}
+.pbu-lead{font-size:20px;color:var(--muted);margin-top:16px;max-width:680px;line-height:1.5}
+.pbu-sec{padding:88px 0}
+.pbu-reassure{display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:wrap;margin-top:16px;color:var(--muted);font-size:15px}
+@media (max-width:760px){.pbu-in{padding:0 20px}.pbu-sec{padding:56px 0}.pbu-lead{font-size:18px}}
 </style>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
 <symbol id="c-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></symbol>
@@ -16,7 +21,7 @@
 <symbol id="c-play" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M7 4.5v15l12-7.5z"/></symbol>
 </defs></svg>
 <style>
-.pbu-foot{text-align:center;padding:24px 16px 40px;font-size:13px;color:var(--muted);line-height:1.6}
+.pbu-foot{text-align:center;padding:28px 16px 44px;font-size:13px;color:var(--muted);line-height:1.6}
 .pbu-foot a{color:var(--muted)}
 </style>
 <div class="pbc">
